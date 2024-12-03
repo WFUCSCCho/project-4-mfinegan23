@@ -121,7 +121,7 @@ Bucket Collisions: A suboptimal hash function or uneven key distribution leads t
 Implementation Overhead: Resizing operations or linked-list traversals within buckets contribute to the observed scaling.
 Dataset Patterns: Sorted datasets exacerbate collisions, increasing traversal times.
 
-While the hash table works as designed, its performance scales closer to O(N) in practice, particularly for larger, sorted datasets. Optimizing the hash function or increasing randomness in the data could improve alignment with theoretical expectations.
+While the hash table works as designed, its performance scales closer to O(N) in practice, particularly for larger, sorted datasets. Optimizing the hash function or increasing randomness in the data could improve alignment with theoretical expectations of O(1).
 
 ## Submission:
 
