@@ -82,22 +82,53 @@ it to this repository.
 
 Insertion, search, and deletion running time (already sorted):
 
-![Firefly picture of a cat 86147](https://github.com/user-attachments/assets/8b2d008e-3011-4979-97b8-fa2e9886a01a)
+<img width="592" alt="Screenshot 2024-12-03 at 12 01 36 PM" src="https://github.com/user-attachments/assets/b8194fc8-75b5-4d85-aa53-a5ab651bb538">
+
+
 
 
 Insertion, search, and deletion running time (shuffled):
 
+<img width="592" alt="Screenshot 2024-12-03 at 12 02 07 PM" src="https://github.com/user-attachments/assets/231e1f11-c49b-4c19-a99c-f9f4454e0bbe">
+
+
+
 Insertion, search, and deletion running time (reversed):
+
+<img width="592" alt="Screenshot 2024-12-03 at 12 02 23 PM" src="https://github.com/user-attachments/assets/3315af6b-1bf2-4aa8-981a-25be5910b15e">
+
+
+
+
 
 ## 5. **Document your Dataset and Results**
 Document the source of your dataset and any modifications you made to it. Describe the results of your analysis and 
 how it compares to the theoretical performance of the hash table operations.
 
-Dataset Source: // FINISH ME
+Dataset Source: Jobs and Salaries in Data Science: https://www.kaggle.com/datasets/hummaamqaasim/jobs-in-data  
 
-Dataset Modifications ("None" if unchanged): // FINISH ME
+Dataset Modifications ("None" if unchanged): None
 
-Result Analysis: // FINISH ME
+Result Analysis: 
+
+Insertions: The data shows a linear increase in insertion time, especially for sorted datasets, suggesting bucket collisions or inefficiencies in the hash function.
+Shuffled and reversed datasets perform better, likely due to more even key distribution.
+
+Searches and Deletions: Both operations also exhibit slight growth with dataset size, deviating from the expected O(1) behavior.
+
+Some potential causes of linear growth:
+Bucket Collisions: A suboptimal hash function or uneven key distribution leads to larger bucket sizes.
+Implementation Overhead: Resizing operations or linked-list traversals within buckets contribute to the observed scaling.
+Dataset Patterns: Sorted datasets exacerbate collisions, increasing traversal times.
+
+While the hash table works as designed, its performance scales closer to O(N) in practice, particularly for larger, sorted datasets. Optimizing the hash function or increasing randomness in the data could improve alignment with theoretical expectations.
+
+In summary:
+
+Insertions are fastest for shuffled datasets.
+Search and deletion operations show a similar trend with shuffled datasets being quicker, followed by reversed and sorted datasets.
+Conclusion:
+The performance of a hash table depends on the data distribution. Shuffling the data before performing operations on the hash table helps in reducing the average time complexity of insert, search, and delete operations, and ensures that the table's load factor remains low. This experiment provides a good demonstration of how data organization can impact hash table performance, with shuffled data yielding the best performance overall.
 
 ## Submission:
 
