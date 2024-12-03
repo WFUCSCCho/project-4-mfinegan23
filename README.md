@@ -123,13 +123,6 @@ Dataset Patterns: Sorted datasets exacerbate collisions, increasing traversal ti
 
 While the hash table works as designed, its performance scales closer to O(N) in practice, particularly for larger, sorted datasets. Optimizing the hash function or increasing randomness in the data could improve alignment with theoretical expectations.
 
-In summary:
-
-Insertions are fastest for shuffled datasets.
-Search and deletion operations show a similar trend with shuffled datasets being quicker, followed by reversed and sorted datasets.
-Conclusion:
-The performance of a hash table depends on the data distribution. Shuffling the data before performing operations on the hash table helps in reducing the average time complexity of insert, search, and delete operations, and ensures that the table's load factor remains low. This experiment provides a good demonstration of how data organization can impact hash table performance, with shuffled data yielding the best performance overall.
-
 ## Submission:
 
 Your project will be developed and graded via GitHub. Your final "push" is your final submission, and it must occur
