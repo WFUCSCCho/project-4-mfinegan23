@@ -114,7 +114,7 @@ Result Analysis:
 Insertions: The data shows a linear increase in insertion time, especially for sorted datasets, suggesting bucket collisions or inefficiencies in the hash function.
 Shuffled and reversed datasets perform better, likely due to more even key distribution.
 
-Searches and Deletions: Both operations also exhibit slight growth with dataset size, deviating from the expected O(1) behavior.
+Searches and Deletions: Both operations for shuffled and reversed data also exhibit slight growth with dataset size, deviating from the expected O(1) behavior. Both operations for sorted data seem to be O(1).
 
 Some potential causes of linear growth:
 Bucket Collisions: A suboptimal hash function or uneven key distribution leads to larger bucket sizes.
